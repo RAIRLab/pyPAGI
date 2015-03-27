@@ -1,3 +1,12 @@
+connectSocket()
+	Connects to PAGI World. Returns a clientsocket object, which you will need later.
+	Optional parameters are:
+		ip = string of an IP address to connect to. If you leave this blank, the function will try to find the IP on its own.
+		port = port number to connect to. If you leave this blank, it defaults to 42209.
+
+Agent(clientSocket)
+	Returns an Agent object. clientSocket should be what was returned from connectSocket().
+
 Agent.jump()
 	makes agent jump
 
@@ -37,5 +46,5 @@ Agent.findObject(obj)
 	Given a name of an object in the world, this function checks the peripheral vision sensors. It returns a list of all peripheral vision sensors that found the object.
 
 clientsocket.send(str)
-	Use to send any messages to PAGI World that aren’t covered by API functions.
+	Use to send any messages to PAGI World that aren’t covered by API functions. Make sure every command ends in the newline character ‘\n’! Otherwise, PAGI World will think that there is more to be sent.
 
