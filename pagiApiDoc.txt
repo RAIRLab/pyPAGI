@@ -1,0 +1,41 @@
+Agent.jump()
+	makes agent jump
+
+Agent.resetRotation()
+	makes agent face upwards
+
+Agent.getRotation(degrees = True)
+	returns angle facing in degrees if True, radians if False. 0 is up, 90 is left, 180 is down, 270 is right
+
+Agent.rotate(val, degrees = True, absolute = True)
+	rotate val number of units (degrees or radians), either relative to world (absolute = True) or current position (absolute = False)
+
+Agent.moveH(paces = 1, direction = 'right')
+	move agent specified number of paces in given direction (‘left’ or ‘right’)
+
+Agent.sendForce(x, y)
+    sends a force of (x,y) to the agent's body
+
+**NOTE: for the following, you can use lhand or rhand***  
+
+Agent.lhand.getCoordinates()
+	returns x y coordinates of hand relative to body
+
+Agent.lhand.getDist(x, y)
+	returns distance of hand from point x y
+
+Agent.lhand.sendForce(x, y)
+    sends a force of (x,y) to the hand
+
+Agent.lhand.grab()
+	close hand
+
+Agent.lhand.release()
+	open hand
+
+Agent.findObject(obj)
+	Given a name of an object in the world, this function checks the peripheral vision sensors. It returns a list of all peripheral vision sensors that found the object.
+
+clientsocket.send(str)
+	Use to send any messages to PAGI World that aren’t covered by API functions.
+
