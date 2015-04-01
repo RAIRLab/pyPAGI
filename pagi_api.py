@@ -20,7 +20,7 @@ def connectSocket(ip=None,port=42209):
     return clientsocket
 
 
-def closeClient():
+def closeClient(clientsocket):
     """
 	Closes connection to PAGI World; must be called to interact with pagi_api outside of pagi_api.py
 	"""

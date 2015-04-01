@@ -34,6 +34,6 @@ while True:
 	else:
 		print "not"
 	
-closeClient()
+closeClient(cs)
 
 exit()
